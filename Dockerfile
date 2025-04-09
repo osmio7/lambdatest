@@ -1,4 +1,5 @@
-FROM node:18-alpine
+#FROM node:18-alpine
+FROM public.ecr.aws/lambda/nodejs:18
 
 WORKDIR /app
 
@@ -11,4 +12,4 @@ RUN npm install
 EXPOSE 3000
 
 #CMD ["npm", "start"]
-CMD ["node", "handler.js"]
+CMD ["handler.handler"]
